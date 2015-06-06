@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+	<html>
+		<head></head>		
+		<body>
+		</body>
+		
+		<script>
+			function _get_scroll_size(){
+				var temp=document.createElement('temp')
+				temp.style.cssText='visibility:hidden; width:50px; height:50px; position:absolute; overflow-y:scroll'
+				document.body.appendChild(temp)
+				var retu=50-temp.clientWidth
+				document.body.removeChild(temp)
+				return retu
+			}
+			var _scroll_size=_get_scroll_size()
+			alert(_scroll_size)
+		</script>
+	</html>
